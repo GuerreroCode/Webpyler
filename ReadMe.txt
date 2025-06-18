@@ -1,41 +1,64 @@
-Webpiler v0.1.0 - static webpage builder
+Webpyler v0.2.0 - static webpage builder
 ****************************************
 
-Webpiler is an open-source static wepbage builder that is simple to use. Think of it like a simple model-view
-html compiler
+Webpyler is an open-source static wepbage builder that is simple to use. Think of it like a simple html
+compiler running on an https server
+
+WHY:
+For simpler websites, this will prevent the need to copy and paste the same html over and over again.
+Lets say you have a header, you can simply add a tag with the  webpyler and it will be dynamically built
+for each page. 
+
+The main benefit is for simple websites. Of course other frameworks such as ASP.NET already have this feature
+but this will allow for simpler webpage construction for less effort.
 
 
 ******************************************
-How to use Webpiler
+How to use Webpyler
 ******************************************
-STEP 1||SET UP||
+STEP 1||CONFIG||
 
-there are 3 directories
+At the top of the webpyler.py file, there are some config variables, such as the certificate,
+keyfile, hostname, and port. You will need to generate your own SSL files for running in order
+for the file to run.
+You can configure the host and port to your desired IP/DNS rather than just the localhost
+
+
+
+STEP 2||HTML SET UP||
+there are 2 directories
 
 html: the main pages that hold the content 
-html_parts: the sub-parts that are copied into the main html pages
-output
+parts: the sub-parts that are copied into the main html pages
 
 place your files accordingly
 
 
-STEP 2||TAGS||
+STEP 3||TAGS||
 
-each html-part in the directory has a corresponding tag. they are formatted <*.html> where * is the filename
+each part in the directory has a corresponding tag. they are formatted <*.html> where * is the filename
 
 In your main html pages, paste your tag where you want your html to appear
 
-STEP 3||RUN||
+For example
 
-run the code with python webpiler.py, the output will be in its folder
+index.html may have 
+<header.html>
+<h1>Example text</h1>
+
+and your filename in /parts will be header.html
+
+
+STEP 4||RUN||
+
+run the code with python3 webpyler.py, loading a page will dynamically write the page
+
+All the html from the /parts will be written where the tag is written in the html
 
 Feel free to manipulate and reproduce this code!
 
 ********************************************************
 Future Plans
 ********************************************************
-Since a python script is all this is so far, this is more of a 
-proof of concept/tool for myseklf to use. A localhost webapp is in developement.
-This will be in ASP.NET, so the language will change to C#, and the first step
-is to recreate the app with a gui interface.
-
+Other request handlers (POST, UPDATE, DELETE, etc.)
+SQL integration
