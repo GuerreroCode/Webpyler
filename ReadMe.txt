@@ -1,4 +1,4 @@
-Webpyler v0.2.0 - static webpage builder
+Webpyler v0.3.0 - static webpage builder
 ****************************************
 
 Webpyler is an open-source static wepbage builder that is simple to use. Think of it like a simple html
@@ -22,6 +22,9 @@ At the top of the webpyler.py file, there are some config variables, such as the
 keyfile, hostname, and port. You will need to generate your own SSL files for running in order
 for the file to run.
 You can configure the host and port to your desired IP/DNS rather than just the localhost
+
+For server setups, you must also config your domain name in redirect.py. This will ensure that
+all http redirects to https for your website 
 
 
 
@@ -52,6 +55,8 @@ and your filename in /parts will be header.html
 STEP 4||RUN||
 
 run the code with python3 webpyler.py, loading a page will dynamically write the page
+
+for http -> https redirects, also run python3 redirect.py (not needed for local testing)
 
 All the html from the /parts will be written where the tag is written in the html
 
