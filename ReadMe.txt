@@ -66,4 +66,5 @@ Feel free to manipulate and reproduce this code!
 Future Plans
 ********************************************************
 Other request handlers (POST, UPDATE, DELETE, etc.)
+Building html differently based on desktop or mobile
 SQL integration
