@@ -66,5 +66,6 @@ Feel free to manipulate and reproduce this code!
 Future Plans
 ********************************************************
 Other request handlers (POST, UPDATE, DELETE, etc.)
+Templates, allowing for simply new text or data, which will populate in a template 
 Building html differently based on desktop or mobile
 SQL integration
